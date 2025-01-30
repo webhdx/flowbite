@@ -2,6 +2,7 @@ languageCode:           "en"
 title:                  "Flowbite"
 baseURL:                "https://flowbite.com/docs/"
 enableInlineShortcodes: true
+canonifyURLs: true
 
 params:
   homepage: "https://flowbite.com"

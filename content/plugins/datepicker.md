@@ -1,5 +1,5 @@
 ---
 layout: redirect
 sitemap_exclude: true
-redirect: "/docs/components/datepicker/"
+redirect: "{{ .Site.BaseURL }}/docs/components/datepicker/"
 ---

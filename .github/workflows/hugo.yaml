@@ -58,9 +58,10 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
-          echo "${{ steps.pages.outputs.base_url }}/docs/" 
+          echo "${{ steps.pages.outputs.base_url }}/" 
           hugo \
-            --baseURL "${{ steps.pages.outputs.base_url }}/docs/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --config config.yml
 
       - name: Move site into docs subdirectory
         run: |

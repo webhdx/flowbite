@@ -1,5 +1,5 @@
 ---
 layout: redirect
 sitemap_exclude: true
-redirect: "/docs/getting-started/quickstart/"
+redirect: "{{ .Site.BaseURL }}/docs/getting-started/quickstart/"
 ---
