@@ -1,6 +1,6 @@
 languageCode:           "en"
 title:                  "Flowbite"
-baseURL:                "https://flowbite.com/docs/"
+baseURL:                "https://webhdx.github.io/flowbite/docs/"
 enableInlineShortcodes: true
 canonifyURLs: true
 
@@ -8,7 +8,7 @@ params:
   homepage: "https://flowbite.com"
   current_version: 2.5.2
   authors: Themesberg
-  social_image_path: /docs/images/og-image.png
+  social_image_path: images/og-image.png
 
 markup:
   goldmark:
