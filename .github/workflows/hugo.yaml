@@ -58,9 +58,16 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
-          echo "${{ steps.pages.outputs.base_url }}/" 
+          echo "${{ steps.pages.outputs.base_url }}/docs/" 
           hugo \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/docs/"
+
+      - name: Move site into docs subdirectory
+        run: |
+          mkdir -p _gh_pages/docs
+          mv _gh_pages/* _gh_pages/docs/
+          mv _gh_pages/.[!.]* _gh_pages/docs/ || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
