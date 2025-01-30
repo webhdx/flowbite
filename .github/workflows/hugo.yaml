@@ -65,8 +65,8 @@ jobs:
       - name: Move site into docs subdirectory
         run: |
           mkdir -p _gh_pages/docs
-          mv _gh_pages/* _gh_pages/docs/
-          mv _gh_pages/.[!.]* _gh_pages/docs/ || true
+          shopt -s extglob
+          mv _gh_pages/!(docs) _gh_pages/docs/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
